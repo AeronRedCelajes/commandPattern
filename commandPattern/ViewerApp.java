@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ViewerApp {
     public static ArrayList<String> devices = new ArrayList<>(); //devices
+    public static double temperature = 23.0;
+
     public static void main(String[] args){
         //default devices
         devices.add("Light");
@@ -37,13 +39,10 @@ public class ViewerApp {
             System.out.println("""
                      1 = Turn On
                      2 = Turn Off
-                     3 = ChangeColorRed
-                     4 = ChangeColorWhite
-                     5 = Increase Volume
-                     6 = Decrease Volume
-                     7 = Increase Temperature
-                     8 = Decrease Temperature""");
-
+                     3 = Increase Volume
+                     4 = Decrease Volume
+                     5 = Increase Temperature
+                     6 = Decrease Temperature""");
 
             String commandChoice = "";
             boolean validChoice2 = false;
@@ -52,10 +51,10 @@ public class ViewerApp {
                 commandChoice = userInput.nextLine();
 
                 if (commandChoice.equals("1") || commandChoice.equals("2") || commandChoice.equals("3") || commandChoice.equals("4")
-                || commandChoice.equals("5") || commandChoice.equals("6") || commandChoice.equals("7") || commandChoice.equals("8"))
+                || commandChoice.equals("5") || commandChoice.equals("6"))
                     validChoice2 = true;
                 else
-                    System.out.println("Invalid input choice. Please choose between 1-8.");
+                    System.out.println("Invalid input choice. Please choose between 1-6.");
             }
 
             Device myDevice = new Device(device);
@@ -71,22 +70,14 @@ public class ViewerApp {
                     System.out.println(turnOff.execute());
                 break;
                 case "3":
-                    ChangeColorRed changeColorRed = new ChangeColorRed(myDevice);
-                    System.out.println(changeColorRed.execute());
-                break;
-                case "4":
-                    ChangeColorWhite changeColorWhite = new ChangeColorWhite(myDevice);
-                    System.out.println(changeColorWhite.execute());
-                break;
-                case "5":
                     IncreaseVolume increaseVolume = new IncreaseVolume(myDevice);
                     System.out.println(increaseVolume.execute());
                 break;
-                case "6":
+                case "4":
                     DecreaseVolume decreaseVolume = new DecreaseVolume(myDevice);
                     System.out.println(decreaseVolume.execute());
                 break;
-                case "7":
+                case "5":
                     IncreaseTemperature increaseTemperature = new IncreaseTemperature(myDevice);
                     System.out.println(increaseTemperature.execute());
                 break;
