@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class ViewerApp {
     public static ArrayList<String> devices = new ArrayList<>(); //devices
-    public static double temperature = 23.0;
 
     public static void main(String[] args){
         //default devices

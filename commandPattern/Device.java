@@ -3,7 +3,7 @@ package commandPattern;
 public class Device {
     private String device;
     private int brightness = 0;
-
+    private static double temperature = 23.0;
     public Device(String deviceName) {
         this.device = deviceName;
     }
@@ -36,16 +36,16 @@ public class Device {
 
     public String increaseTemp(){
         if(device.equals("Thermostat")){
-            ViewerApp.temperature++;
-            return "The temperature is increasing using the " + device + "!\nTemperature level is now " + ViewerApp.temperature + " degrees Celsius.";
+            temperature++;
+            return "The temperature is increasing using the " + device + "!\nTemperature level is now " + temperature + " degrees Celsius.";
         }
         return "The temperature is increasing using the " + device;
     }
 
     public String decreaseTemp(){
         if(device.equals("Thermostat")){
-            ViewerApp.temperature++;
-            return "The temperature is decreasing using the " + device + "!\nTemperature level is now " + ViewerApp.temperature + " degrees Celsius.";
+            temperature--;
+            return "The temperature is decreasing using the " + device + "!\nTemperature level is now " + temperature + " degrees Celsius.";
         }
         return "The temperature is decreasing using the " + device;
     }
