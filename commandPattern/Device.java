@@ -4,6 +4,7 @@ public class Device {
     private String device;
     private int brightness = 0;
     private static double temperature = 23.0;
+
     public Device(String deviceName) {
         this.device = deviceName;
     }
