@@ -41,7 +41,9 @@ public class ViewerApp {
                      3 = Increase Volume
                      4 = Decrease Volume
                      5 = Increase Temperature
-                     6 = Decrease Temperature""");
+                     6 = Decrease Temperature
+                     7 = Play
+                     8 = Pause""");
 
             String commandChoice = "";
             boolean validChoice2 = false;
@@ -50,7 +52,7 @@ public class ViewerApp {
                 commandChoice = userInput.nextLine();
 
                 if (commandChoice.equals("1") || commandChoice.equals("2") || commandChoice.equals("3") || commandChoice.equals("4")
-                || commandChoice.equals("5") || commandChoice.equals("6"))
+                || commandChoice.equals("5") || commandChoice.equals("6") || commandChoice.equals("7") || commandChoice.equals("8"))
                     validChoice2 = true;
                 else
                     System.out.println("Invalid input choice. Please choose between 1-6.");
@@ -80,9 +82,17 @@ public class ViewerApp {
                     IncreaseTemperature increaseTemperature = new IncreaseTemperature(myDevice);
                     System.out.println(increaseTemperature.execute());
                 break;
-                default:
+                case "6":
                     DecreaseTemperature decreaseTemperature = new DecreaseTemperature(myDevice);
                     System.out.println(decreaseTemperature.execute());
+                    break;
+                case "7":
+                    Play play = new Play(myDevice);
+                    System.out.println(play.execute());
+                    break;
+                default:
+                    Pause pause = new Pause(myDevice);
+                    System.out.println(pause.execute());
             }
 
             //questions the user to exit the program or not

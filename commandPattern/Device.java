@@ -50,4 +50,12 @@ public class Device {
         }
         return "The temperature is decreasing using the " + device;
     }
+
+    public String pause(){
+        return "The " + device + " is paused.";
+    }
+
+    public String play(){
+        return "The " + device + " is playing.";
+    }
 }
