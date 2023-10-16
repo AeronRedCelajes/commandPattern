@@ -7,6 +7,7 @@ public class IncreaseTemperature implements Command {
         this.device = device;
     }
 
+    @Override
     public String execute(){
         return device.increaseTemp();
     }

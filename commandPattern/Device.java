@@ -56,6 +56,8 @@ public class Device {
     }
 
     public String play(){
+        if (device.equals("Music player"))
+            return device + " is playing!\nNow playing: Payphone";
         return "The " + device + " is playing.";
     }
 }

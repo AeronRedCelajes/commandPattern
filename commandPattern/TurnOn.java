@@ -7,6 +7,7 @@ public class TurnOn implements Command {
         this.device = device;
     }
 
+    @Override
     public String execute(){
         return device.switchOn();
     }
