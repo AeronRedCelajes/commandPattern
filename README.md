@@ -14,4 +14,4 @@ Design a system that allows you to control multiple smart home devices with ease
 Your challenge is to apply a design pattern that provides a flexible and scalable way to control a variety of smart home devices, ensuring that new devices can be added without disrupting the existing system's functionality.
 
 ## Class Diagram
-![UML Class Diagram](https://github.com/AeronRedCelajes/commandPattern/assets/142370807/4f00a4e9-e24e-4c78-85c5-6e4766d14781)
+![UML Class Diagram](https://github.com/AeronRedCelajes/commandPattern/assets/142370807/5624d8c1-e660-49d5-8e85-bfb4edb21fdc)
