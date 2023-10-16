@@ -6,6 +6,12 @@ public class ViewerApp {
     public static ArrayList<String> devices = new ArrayList<>(); //devices
 
     public static void main(String[] args){
+
+        /*  Aeron Red R. Celajes
+            3BSCS-1
+            Lab Assignment 5 Command Pattern
+        */
+
         //default devices
         devices.add("Light");
         devices.add("Thermostat");
